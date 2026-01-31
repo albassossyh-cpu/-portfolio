@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل موظف - على ضمانتي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <a href="index.html"
+                    style="font-size: 1.8rem; font-weight: 800; color: var(--accent-color); text-transform: uppercase;">
+                    Ala Damanaty
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="employee.html" class="active">تسجيل موظف</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="employee-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>بوابة الموظفين</h2>
+                    <p>انضم إلى فريق المحترفين في "على ضمانتي"</p>
+                </div>
+
+                <div class="form-container">
+                    <div class="form-toggle">
+                        <span id="show-login" class="active" onclick="showForm('login')">تسجيل دخول</span>
+                        <span id="show-register" onclick="showForm('register')">تسجيل موظف جديد</span>
+                    </div>
+
+                    <!-- Login Form -->
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-email">البريد الإلكتروني</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">كلمة المرور</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">دخول</button>
+                    </form>
+
+                    <!-- Register Form -->
+                    <form id="register-form" class="hidden">
+                        <div class="form-group">
+                            <label for="reg-name">الاسم بالكامل</label>
+                            <input type="text" id="reg-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-email">البريد الإلكتروني</label>
+                            <input type="email" id="reg-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-password">كلمة المرور</label>
+                            <input type="password" id="reg-password" required minlength="6">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-national-id">الرقم القومي</label>
+                            <input type="text" id="reg-national-id" required pattern="[0-9]{14}"
+                                title="يجب أن يتكون الرقم القومي من 14 رقم">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-phone">رقم الهاتف</label>
+                            <input type="tel" id="reg-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-job">القسم / التخصص</label>
+                            <select id="reg-job" required>
+                                <option value="">اختر القسم...</option>
+                                <option value="electricity">كهرباء</option>
+                                <option value="plumbing">سباكة</option>
+                                <option value="carpentry">نجارة</option>
+                                <option value="masonry">محارة</option>
+                                <option value="blacksmithing">حدادة</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">تسجيل</button>
+                    </form>
+
+                    <div id="message-box" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; 2026 شركة على ضمانتي</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
