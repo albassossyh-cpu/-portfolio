@@ -60,14 +60,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  min-height: 80px;
 }
 
 .logo img {
-  height: 100px;
-  /* Increased size slightly */
-  margin-top: 10px;
-  /* Slight adjustment for overlap/visual */
+  height: 75px;
+  width: auto;
+  display: block;
 }
 
 /* Navigation */
